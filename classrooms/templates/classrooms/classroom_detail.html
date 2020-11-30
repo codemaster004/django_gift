@@ -46,7 +46,11 @@
                     {% if context.user_type == 'teacher' %}
                         <a href="/classes/{{ object.id }}/update/">Edit Class</a>
                     {% endif %}
-                    {% if picked_person is not None %}<a href="/classes/{{ object.id }}/generate/">Generate</a><{% endif %}
+                    {% if context.user_type == 'teacher' %}
+                        {% if not picked_person %}
+                            <a href="/classes/{{ object.id }}/generate/">Generate</a>
+                        {% endif %}
+                    {% endif %}
                 </p>
             </header>
             {% for student in students %}

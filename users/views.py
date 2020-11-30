@@ -95,7 +95,7 @@ def profile_delete_view(request, slug):
 		user = User.objects.get(email=em)
 		
 		user.delete()
-		return redirect('../')
+		return redirect('/')
 	
 	base_data = get_my_classes(request)
 	

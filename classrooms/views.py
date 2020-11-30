@@ -79,10 +79,21 @@ def classes_list_view(request):
 	
 	classes = Classroom.objects.filter(name__icontains=query)
 	
+	email = request.user.email
+	user = Student.objects.filter(email__exact=email).first()
+	if user is None:
+		user = Teacher.objects.filter(email__exact=email).first()
+	waiting = user.waiting.all()
+	my_classes = user.classroom.all()
+	
+	print(classes, waiting)
+	
 	base_data = get_my_classes(request)
 	
 	context = {
 		'classes_find': classes,
+		'waiting': waiting,
+		'my_classes': my_classes,
 		'user_email': request.user.email,
 		'context': base_data
 	}

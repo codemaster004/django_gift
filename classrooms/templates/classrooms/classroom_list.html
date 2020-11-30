@@ -39,9 +39,19 @@
         <section>
             {% for class in classes_find %}
                 <div class="to_remove">
-                    <button class="ask" name="{{ class.id }}">
-                        Ask to join
-                    </button>
+                    {% if not class in waiting %}
+                        <button class="ask" name="{{ class.id }}">
+                            Ask to join
+                        </button>
+                    {% elif class in my_classes %}
+                        <button class="" name="">
+                            You are in
+                        </button>
+                    {% else %}
+                        <button class="" name="">
+                            Waiting
+                        </button>
+                    {% endif %}
                     <div>
                         <h1>{{ class.name }}</h1>
                     </div>
@@ -61,7 +71,7 @@
             }); 
         })
         
-        ask_button = document.querySelectorAll("button.remove");
+        ask_button = document.querySelectorAll("button.ask");
         rows0 = document.querySelectorAll(".to_remove");
         for (var i = 0; i < ask_button.length; i++) {
             ask_button[i].addEventListener("click", function() {
