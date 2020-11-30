@@ -116,6 +116,10 @@
 
                     <button type="submit" class="main_button">Register</button>
                 </form>
+                {% for message in messages %}
+                    <h5>{{ message }}</h5>
+                {% endfor %}
+                {{ form.errors }}
             </div>
         </div>
     </main>
