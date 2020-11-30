@@ -32,7 +32,9 @@
             	<input type="text" placeholder="Search For Class">
             </form>
             <div class="user">
-                <i class="icon-user-circle-o more_icon"></i>
+                <a href="{{ context.base_user.get_absolute_url }}">
+                    <i class="icon-user-circle-o more_icon"></i>
+                </a>
                 <p>Hi, Filip</p>
             </div>
         </header>

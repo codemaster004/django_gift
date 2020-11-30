@@ -65,6 +65,7 @@ def get_my_classes(request):
 		classes = user.classroom.all()
 	
 	context = {
+		'base_user': user,
 		'username': username,
 		'classes': classes,
 		'user_type': user_type
