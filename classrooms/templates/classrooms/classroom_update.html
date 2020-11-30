@@ -38,7 +38,11 @@
         </header>
         <section>
             <header>
-                <p>Class <span>{{ object.name }}</span>:<a href="/classes/{{ object.id }}/delete/">delete class</a></p>
+                <p>Class <span>{{ object.name }}</span>:
+                	{% if context.user_type == 'teacher' %}
+                		<a href="/classes/{{ object.id }}/delete/">delete class</a>
+                	{% endif %}
+                </p>
             </header>
             
             <header>
