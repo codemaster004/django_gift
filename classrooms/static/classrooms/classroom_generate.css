@@ -117,7 +117,7 @@ section > div p:nth-of-type(2n + 0) {
     background-color: #e5e5e5
 }
 
-content button {
+section a {
     margin-top: 20px;
     padding: 10px;
     transform: translateY(-50%);
@@ -129,6 +129,6 @@ content button {
     border-radius: 5px;
 }
 
-content button:hover {
+section a:hover {
     background-color: #eee;
 }

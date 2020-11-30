@@ -60,6 +60,18 @@
                 dataType: "json",
             }); 
         })
+        
+        ask_button = document.querySelectorAll("button.remove");
+        rows0 = document.querySelectorAll(".to_remove");
+        for (var i = 0; i < ask_button.length; i++) {
+            ask_button[i].addEventListener("click", function() {
+                for(var j = 0; j < ask_button.length; j++) {
+                    if(ask_button[j] == this) {
+                        rows0[j].style.display = "none"
+                    }
+                }
+            })
+        }
     </script>
 </body>
 

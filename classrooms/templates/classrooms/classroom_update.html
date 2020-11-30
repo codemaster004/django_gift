@@ -87,12 +87,12 @@
 		})
 	
 		remove_button = document.querySelectorAll("button.remove");
-		rows = document.querySelectorAll(".to_remove");
+		rows1 = document.querySelectorAll(".to_remove");
 		for (var i = 0; i < remove_button.length; i++) {
 			remove_button[i].addEventListener("click", function() {
 				for(var j = 0; j < remove_button.length; j++) {
 					if(remove_button[j] == this) {
-						rows[j].style.display = "none"
+						rows1[j].style.display = "none"
 					}
 				}
 			})
@@ -108,13 +108,13 @@
             }); 
         })
     
-		remove_button = document.querySelectorAll("button.approve");
-		rows = document.querySelectorAll(".waiting");
-		for (var i = 0; i < remove_button.length; i++) {
-			remove_button[i].addEventListener("click", function() {
-				for(var j = 0; j < remove_button.length; j++) {
-					if(remove_button[j] == this) {
-						rows[j].style.display = "none"
+		approve_button = document.querySelectorAll("button.approve");
+		rows2 = document.querySelectorAll(".waiting");
+		for (var i = 0; i < approve_button.length; i++) {
+			approve_button[i].addEventListener("click", function() {
+				for(var j = 0; j < approve_button.length; j++) {
+					if(approve_button[j] == this) {
+						rows2[j].style.display = "none"
 					}
 				}
 			})

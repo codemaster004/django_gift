@@ -110,6 +110,9 @@ def class_detail_view(request, id):
 	
 	base_data = get_my_classes(request)
 	
+	if not (user in students):
+		redirect('/classes/')
+	
 	context = {
 		'object': obj,
 		'students': students,
