@@ -74,7 +74,9 @@ main {
     text-align: right;
     width: 60%;
 }
-
+.signup .auth_box > div:nth-child(1) {
+    background-image: url(images/filip_auth.jpg);
+}
 .auth_box > div:nth-child(1) .logo {
     position: absolute;
     top: 30px;

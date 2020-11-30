@@ -69,16 +69,11 @@
             font-size: 10px;
             font-weight: 600;
         }
-
-        .auth_box > div:nth-child(1)
-        {
-            background-image: url(../img/filip_auth.jpg);
-        }
 	</style>
 </head>
 
 <body style="overflow: hidden;">
-    <main>
+    <main class="signup">
         <div class="auth_box">
             <div>
                 <p>Already have an account? <a href="{% url 'signin' %}">Log in</a></p>
@@ -90,7 +85,7 @@
             <div>
                 <div class="logo"><a href="./index.html">Return to homepage.</a></div>
 
-                <form method="POST" action="">
+                <form method="POST" action="">{% csrf_token %}
 
                 	<div class="form_item">
                         {{ form.username }}
