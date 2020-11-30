@@ -1,42 +1,10 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Sign Up</title>
-</head>
-<body>
-	<h1>Sign Up</h1>
-	<form method="POST"> {% csrf_token %}
-		<label for="username">Username</label>
-		{{ form.username }}
-		
-		<label for="email">Email</label>
-		{{ form.email }}
-		
-		<label for="password1">Password</label>
-		{{ form.password1 }}
-		
-		<label for="password2">Confirm</label>
-		{{ form.password2 }}
-		
-		<label for="user_type">Are You a Teacher?</label>
-		<input type="checkbox" name="user_type">
-		
-		<button type="submit">Sign Up</button>
-	</form>
-	
-	{% for message in messages %}
-		<h5>{{ message }}</h5>
-	{% endfor %}
-	{{ form.errors }}
-</body>
-</html> -->
-
 {% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
-	
+	<title>Sign UP</title>
+    
 	<link rel="stylesheet" href="{% static 'pages/auth.css' %}">
 	
     <style>
@@ -83,7 +51,7 @@
                 </div>
             </div>
             <div>
-                <div class="logo"><a href="./index.html">Return to homepage.</a></div>
+                <div class="logo"><a href="{% url 'landing_page' %}">Return to homepage.</a></div>
 
                 <form method="POST" action="">{% csrf_token %}
 

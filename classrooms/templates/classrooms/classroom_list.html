@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Document</title>
+    <title>Class List</title>
 
     <link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
     <link rel="stylesheet" href="{% static 'classrooms/classroom_update.css' %}">
@@ -12,7 +12,7 @@
 <body>
     <nav class="side_nav">
         <div class="nav_start">
-            <h3>Class Gifts</h3>
+            <h3><a href="{% url 'landing_page' %}">Class Gifts</a></h3>
             <p>Browse people in class and see their whishlist</p>
             {% if context.user_type == 'teacher' %}
             	<a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
@@ -43,14 +43,16 @@
                         <button class="ask" name="{{ class.id }}">
                             Ask to join
                         </button>
-                    {% elif class in my_classes %}
-                        <button class="" name="">
-                            You are in
-                        </button>
                     {% else %}
-                        <button class="" name="">
-                            Waiting
-                        </button>
+                        {% if class in my_classes %}
+                            <button class="" name="">
+                                You are in
+                            </button>
+                        {% else %}
+                            <button class="" name="">
+                                Waiting
+                            </button>
+                        {% endif %}
                     {% endif %}
                     <div>
                         <h1>{{ class.name }}</h1>

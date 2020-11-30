@@ -81,7 +81,11 @@ button:hover {
     height: 150px;
     border-top-right-radius: 25px;
 }
-.side_nav .nav_start a {
+.side_nav .nav_start h3 a {
+    color: white;
+    text-decoration: none;
+}
+.side_nav .nav_start > a {
     display: block;
     text-decoration: none;
     color: #fff;

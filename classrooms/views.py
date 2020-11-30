@@ -201,15 +201,16 @@ def class_generate_view(request, id):
 	users.append(teacher)
 	new_users = users[:]
 	
-	not_shuffled = True
-	while not_shuffled:
-		random.shuffle(new_users)
-		
-		value = False
-		for user_index in range(len(new_users)):
-			if new_users[user_index] == users[user_index]:
-				value = True
-		not_shuffled = value
+	if len(users) != 1:
+		not_shuffled = True
+		while not_shuffled:
+			random.shuffle(new_users)
+			
+			value = False
+			for user_index in range(len(new_users)):
+				if new_users[user_index] == users[user_index]:
+					value = True
+			not_shuffled = value
 				
 	
 	base_data = get_my_classes(request)
