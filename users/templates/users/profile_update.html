@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
+    <link rel="stylesheet" href="{% static 'users/user_detail.css' %}">
+</head>
+
+<body>
+    <nav class="side_nav">
+        <div class="nav_start">
+            <h3>Class Gifts</h3>
+            <p>Browse people in class and see their whishlist</p>
+            {% if context.user_type == 'teacher' %}
+                <a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
+            {% endif %}
+        </div>
+        {% for class in context.classes %}
+            <div class="class_div">
+                <a href="{{ class.get_absolute_url }}">{{ class.name }}</a>
+            </div>
+        {% endfor %}
+        <a href="{% url 'logout' %}" style="position: fixed; bottom: 20px; left: 20px; color: #fff; font-size: 14px;">Log Out</a>
+    </nav>
+    <main>
+        <header>
+            <i>&#35;</i>
+            <form method="GET" action="{% url 'classrooms:classrooms-list' %}">
+            	<input type="text" placeholder="Search For Class">
+            </form>
+            <div class="user">
+                <i class="icon-user-circle-o more_icon"></i>
+                <p>Hi, {{ username }}</p>
+            </div>
+        </header>
+        <section>
+        	<div class="user_info_box">
+                <div class="image_box"></div>
+                <div class="user_text_box user_edit_box">
+                    <form method="POST">{% csrf_token %}
+                        <input type="text" placeholder="{{ username }}" value="{{ username }}" name="username">
+                        <h4>{{ email }}</h4>
+                        <textarea name="bio" id="" cols="30" rows="10" placeholder="{{ bio }}">{{ bio }}</textarea>
+                        <button type="submit" class="main_button">Save</button>
+                        <a class="second_button" href="../">Cancel</a>
+                    </form>
+                </div>
+            </div>
+            <p style="transform: translateY(75vh); font-size: 13px;">If you want to Delete your account you account you can do it <a href="/user/{{ slug }}/delete" style="color: rgb(241, 67, 68);">here</a> .</p>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
+    <link rel="stylesheet" href="{% static 'classrooms/classroom_update.css' %}">
+</head>
+
+<body>
+    <nav class="side_nav">
+        <div class="nav_start">
+            <h3>Class Gifts</h3>
+            <p>Browse people in class and see their whishlist</p>
+            {% if context.user_type == 'teacher' %}
+            	<a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
+            {% endif %}
+        </div>
+        {% for class in context.classes %}
+	        <div class="class_div">
+	            <a href="{{ class.get_absolute_url }}">{{ class.name }}</a>
+	        </div>
+        {% endfor %}
+        <a href="{% url 'logout' %}" style="position: fixed; bottom: 20px; left: 20px; color: #fff; font-size: 14px;">Log Out</a>
+    </nav>
+    <main>
+        <header>
+            <i>&#35;</i>
+            <form method="GET" action="{% url 'classrooms:classrooms-list' %}">
+                <input type="text" name="search_class" placeholder="Search For Class">
+            </form>
+            <div class="user">
+                <i class="icon-user-circle-o more_icon"></i>
+                <p>Hi, {{ context.username }}</p>
+            </div>
+        </header>
+        <section>
+            {% for class in classes_find %}
+                <div class="to_remove">
+                    <button class="ask" name="{{ class.id }}">
+                        Ask to join
+                    </button>
+                    <div>
+                        <h1>{{ class.name }}</h1>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('.ask').click(function(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'classrooms:ask' %}",
+                data: {'student': '{{ user_email }}', 'classroom': $(this).attr('name'), 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                dataType: "json",
+            }); 
+        })
+    </script>
+</body>
+
+</html>

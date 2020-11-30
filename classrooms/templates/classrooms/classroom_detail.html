@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Class</title>
+
+    <link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
+    <link rel="stylesheet" href="{% static 'classrooms/classroom_detail.css' %}">
+</head>
+
+<body>
+    <nav class="side_nav">
+        <div class="nav_start">
+            <h3>Class Gifts</h3>
+            <p>Browse people in class and see their whishlist</p>
+            {% if context.user_type == 'teacher' %}
+            	<a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
+            {% endif %}
+        </div>
+        {% for class in context.classes %}
+	        <div class="class_div">
+	            <a href="{{ class.get_absolute_url }}">{{ class.name }}</a>
+	        </div>
+        {% endfor %}
+        <a href="{% url 'logout' %}" style="position: fixed; bottom: 20px; left: 20px; color: #fff; font-size: 14px;">Log Out</a>
+    </nav>
+    <main>
+        <header>
+            <i>&#35;</i>
+            <form method="GET" action="{% url 'classrooms:classrooms-list' %}">
+                <input type="text" name="search_class" placeholder="Search For Class">
+            </form>
+            <div class="user">
+                <i class="icon-user-circle-o more_icon"></i>
+                <p>Hi, {{ context.username }}</p>
+            </div>
+        </header>
+        <section>
+            <header>
+                Teacher: <a href="{{ teacher.get_absolute_url }}" style="color: #f14344; text-decoration: none;"><span>{{ teacher.username }}</span></a>
+            </header>
+            
+            <header>
+                <p>Students in class <span>{{ object.name }}</span>:
+                    <a href="/classes/{{ object.id }}/update/">Edit Class</a>
+                    {% if picked_person in not None %}<a href="/classes/{{ object.id }}/generate/">Generate</a><{% endif %}
+                </p>
+            </header>
+            {% for student in students %}
+	            <div>
+	                <div style="background-image: url(../../static/classrooms/images/christmas0.jpg" class="img_box"></div>
+	                <div>
+	                    <h1><a href="{{ student.get_absolute_url }}">{{ student.username }}</a>{% if student.username == picked_person.picked_name %}<span><- Your person</span>{% endif %}</h1>
+	                    <p>
+	                        {{ student.bio }}
+	                    </p>
+	                </div>
+	            </div>
+            {% endfor %}
+        </section>
+    </main>
+    
+    <script type="text/javascript">
+        images = document.querySelectorAll(".img_box")
+        for(let i = 0; i < images.length; i++) {
+            images[i].style.backgroundImage = `url(../../static/classrooms/images/christmas${Math.floor(Math.random() * 8)}.jpg`;
+        }
+    </script>
+</body>
+
+</html>

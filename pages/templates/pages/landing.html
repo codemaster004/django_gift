@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{% static 'pages/landing.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/fontello/css/fontello.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Class Gifts</h1>
+            </div>
+            <div>
+                <p style="color: #f14344;">Home</p>
+                <a href="{% url 'signin' %}">Log In</a>
+              	<a href="{% url 'signup' %}">Sign Up</a>
+            </div>
+            <span style="display: block; clear: both;"></span>
+        </nav>
+        <div class="header_content">
+            <div class="header_left">
+                <div class="header_reverse">
+                    <h1>Ready for class christmas?</h1>
+                    <p>Problems with drawing names in class? We can do it for you. Just create class acount and you are ready to go.</p>
+                    <button class="main_button"><a href="{{ user.get_absolute_url }}">Website</a></button>
+                    <button class="second_button"><a href="#main">Read More</a></button>
+                </div>
+                <span style="display: block; clear: both;"></span>
+            </div>
+            <div class="header_right">
+                <div class="header_reverse"></div>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <content>
+            <section class="about_text">
+                <h1>
+                    About Us
+                </h1>
+                <p>
+                    Filip write something here, I'm too lazy.
+                    <br>
+                    <br>
+                    So idea come to mind when our teacher told us about class nicolas and drawing names. After that it was only coding and developing new features
+                </p>
+            </section>
+            <section class="img_demo">
+                
+            </section>
+            <section class="features">
+                <div style="display: none;"><div></div><p></p></div>
+                <div><div><i class="icon-group"></i></div><p>Easy students drawing</p></div>
+                <span style="clear:both; display:block"></span>
+                <div style="display: none;"><div></div><p></p></div>
+                <div><div><i class="icon-th-list"></i></div><p>Create your wishlist / bio</p></div>
+            </section>
+        </content>
+    </main>
+    <footer>
+        <div class="logo">
+            <span>Das Christmas</span>
+        </div>
+        <p>Ja nie wiem pewnie jakieś kopirajty &copy; xeorast &amp; Filip Dąbkowski 2021 (bo do 2020 sie nie przyznaje).</p>
+    </footer>
+</body>
+</html>

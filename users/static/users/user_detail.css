@@ -1,0 +1,72 @@
+.user_info_box {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.user_info_box > * {
+    float: left;
+}
+.image_box {
+    background-image: url(images/christmas0.jpg);
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    background-size: cover;
+    box-shadow: -5px 10px 15px 3px rgba(0, 0, 0, 0.1);
+}
+.user_text_box {
+    width: 50%;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.user_text_box h1 {
+    padding: 10px 0px 5px 0px;
+}
+.user_text_box h1 a {
+    font-size: 15px;
+    color: rgb(241, 67, 68);
+    font-weight: 300;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.user_text_box h4 {
+    padding: 0px 0px 10px 0px;
+    color: #444;
+    font-weight: 600;
+    font-size: 15px;
+}
+.user_text_box p {
+    color: #aaa;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+.user_edit_box input {
+    -webkit-appearance: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 0px 2px 0px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    width: 240px;
+}
+.user_edit_box h4 {
+    padding-top: 8px;
+}
+.user_edit_box textarea {
+    -webkit-appearance: none;
+    resize: none;
+    outline: none;
+    padding: 5px;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+}

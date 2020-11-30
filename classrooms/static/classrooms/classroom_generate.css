@@ -1,0 +1,134 @@
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    text-align: initial;
+    height: 100vh;
+}
+
+main::before {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+}
+
+main > header {
+    position: fixed;
+    width: 80vw;
+}
+
+section:first-of-type {
+    margin-top: 50px;
+}
+
+section {
+    width: 80vw;
+    padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    display: block;
+}
+
+section header {
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section header span {
+    font-weight: 700;
+}
+
+section header button {
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50%;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+section header button:hover {
+    background-color: #eee;
+}
+
+section header a {
+    display: block;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font: 400 13.3333px Arial;
+}
+
+section header a:hover {
+    background-color: #eee;
+}
+
+section > div {
+    min-height: 20px;
+    min-width: 15%;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+}
+
+section > div > button {
+    position: absolute;
+    right: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+section > div > button:hover {
+    background-color: #ddd;
+}
+
+section > div p {
+    font-size: 17px;
+    padding: 1px 10px;
+}
+
+section > div p:nth-of-type(2n + 0) {
+    background-color: #e5e5e5
+}
+
+content button {
+    margin-top: 20px;
+    padding: 10px;
+    transform: translateY(-50%);
+    right: 50%;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+content button:hover {
+    background-color: #eee;
+}

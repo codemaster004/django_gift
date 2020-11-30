@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main {
+    width: 80vw;
+    margin-left: 20vw;
+}
+main > header {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    background-color: #fefefe;
+    padding-left: 20px;
+}
+main > header > * {
+   float: left;
+}
+main > header > i {
+    margin-top: 15px;
+    width: 20px;
+}
+main > header form {
+    width: 65%;
+}
+main > header input {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fefefe;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+}
+.user {
+    padding-top: 10px;
+    width: 25%;
+}
+.user p {
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
+.user i {
+    float: right;
+    background-color: #ddd;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+
+.side_nav {
+    width: 20vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: left;
+    background-color: rgb(241, 67, 68);
+}
+.side_nav > div {
+    background-color: rgb(241, 67, 68);
+    padding-left: 15px;
+}
+.side_nav .nav_start {
+    padding-top: 20px;
+    height: 150px;
+    border-top-right-radius: 25px;
+}
+.side_nav .nav_start a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: right;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.side_nav .class_div {
+    height: 40px;
+}
+.side_nav .class_div a {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.side_nav .slected a {
+    background-color: #fff;
+    color: #000;
+}
+.side_nav .nav_end {
+    border-bottom-right-radius: 25px;
+    height: calc(100vh - 150px - 40px * 2);
+}
+.side_nav h3 {
+    color: #fff;
+    letter-spacing: 1px;
+}
+.side_nav p {
+    font-size: 12px;
+    color: #ccc;
+    padding-top: 15px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+
+section {
+    position: relative;
+    min-height: 90vh;
+}
+
+
+.main_button {
+    padding: 10px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.main_button:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
+.second_button {
+    padding: 10px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.second_button:hover {
+    cursor: pointer;
+    background-color: #eee;
+}

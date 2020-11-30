@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Class</title>
+
+    <link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
+    <link rel="stylesheet" href="{% static 'classrooms/classroom_update.css' %}">
+</head>
+
+<body>
+    <nav class="side_nav">
+        <div class="nav_start">
+            <h3>Class Gifts</h3>
+            <p>Browse people in class and see their whishlist</p>
+            {% if context.user_type == 'teacher' %}
+            	<a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
+            {% endif %}
+        </div>
+        {% for class in context.classes %}
+	        <div class="class_div">
+	            <a href="{{ class.get_absolute_url }}">{{ class.name }}</a>
+	        </div>
+        {% endfor %}
+        <a href="{% url 'logout' %}" style="position: fixed; bottom: 20px; left: 20px; color: #fff; font-size: 14px;">Log Out</a>
+    </nav>
+    <main>
+        <header>
+            <i>&#35;</i>
+            <form method="GET" action="{% url 'classrooms:classrooms-list' %}">
+            	<input type="text" placeholder="Search For Class">
+            </form>
+            <div class="user">
+                <i class="icon-user-circle-o more_icon"></i>
+                <p>Hi, Filip</p>
+            </div>
+        </header>
+        <section>
+            <header>
+                <p>Class <span>{{ object.name }}</span>:<a href="/classes/{{ object.id }}/delete/">delete class</a></p>
+            </header>
+            
+            <header>
+            	Students <span>{{ object.name }}</span>:
+            </header>
+            {% for student in students %}
+	            <div class="to_remove">
+	                <button class="remove" name="{{ student.id }}">
+	                    remove
+	                </button>
+	                <div>
+	                    <h1>{{ student.username }}</h1>
+	                </div>
+	            </div>
+            {% endfor %}
+            
+            <header>
+            	Waiting to join <span>{{ object.name }}</span>:
+            </header>
+            {% for student in waiting %}
+	            <div class="waiting">
+	                <button class="approve" name="{{ student.id }}">
+	                    accept
+	                </button>
+	                <div>
+	                    <h1>{{ student.username }}</h1>
+	                </div>
+	            </div>
+	        {% endfor %}
+        </section>
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.remove').click(function(){
+			$.ajax({
+				type: "POST",
+				url: "{% url 'classrooms:remove' %}",
+				data: {'student': $(this).attr('name'), 'classroom': '{{ object.id }}', 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+				dataType: "json",
+			}); 
+		})
+	
+		remove_button = document.querySelectorAll("button.remove");
+		rows = document.querySelectorAll(".to_remove");
+		for (var i = 0; i < remove_button.length; i++) {
+			remove_button[i].addEventListener("click", function() {
+				for(var j = 0; j < remove_button.length; j++) {
+					if(remove_button[j] == this) {
+						rows[j].style.display = "none"
+					}
+				}
+			})
+		}
+	</script>
+    <script type="text/javascript">
+        $('.approve').click(function(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'classrooms:approve' %}",
+                data: {'student': $(this).attr('name'), 'classroom': '{{ object.id }}', 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                dataType: "json",
+            }); 
+        })
+    
+		remove_button = document.querySelectorAll("button.approve");
+		rows = document.querySelectorAll(".waiting");
+		for (var i = 0; i < remove_button.length; i++) {
+			remove_button[i].addEventListener("click", function() {
+				for(var j = 0; j < remove_button.length; j++) {
+					if(remove_button[j] == this) {
+						rows[j].style.display = "none"
+					}
+				}
+			})
+		}
+	</script>
+</body>
+
+</html>
+

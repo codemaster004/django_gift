@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate</title>
+
+	<link rel="stylesheet" href="{% static 'classrooms/base.css' %}">
+    <link rel="stylesheet" href="{% static 'classrooms/classroom_generate.css' %}">
+</head>
+
+<body>
+    <nav class="side_nav">
+        <div class="nav_start">
+            <h3>Class Gifts</h3>
+            <p>Browse people in class and see their whishlist</p>
+            {% if context.user_type == 'teacher' %}
+            	<a href="{% url 'classrooms:classroom-create' %}">New Class +</a>
+            {% endif %}
+        </div>
+        {% for class in context.classes %}
+	        <div class="class_div">
+	            <a href="{{ class.get_absolute_url }}">{{ class.name }}</a>
+	        </div>
+        {% endfor %}
+        <a href="{% url 'logout' %}" style="position: fixed; bottom: 20px; left: 20px; color: #fff; font-size: 14px;">Log Out</a>
+    </nav>
+    <main>
+        <header>
+            <i>&#35;</i>
+            <form method="GET" action="{% url 'classrooms:classrooms-list' %}">
+                <input type="text" name="search_class" placeholder="Search For Class">
+            </form>
+            <div class="user">
+                <i class="icon-user-circle-o more_icon"></i>
+                <p>Hi, {{ context.username }}</p>
+            </div>
+        </header>
+        <section>
+            <header>
+                <p>Effect of drawinging in <span>{{ object.name }}</span>:<a href="/classes/{{ object.id }}/generate/">Repeat</a></p>
+            </header>
+
+            <div id="left">
+                {% for user in users %}
+					<p>{{ user.username }}</p>
+				{% endfor %}
+            </div>
+            <div id="right">
+                {% for picked in picked_users %}
+					<p>{{ picked.username }}</p>
+				{% endfor %}
+            </div>
+            <span style="display:block;clear:both;"></span>
+            <button class="save">Save</button>
+        </section>
+    </main>
+    
+    <script type="text/javascript">
+		function collectData() {
+			const rightDiv = document.querySelectorAll("#right > p")
+			const leftDiv = document.querySelectorAll("#left > p")
+
+			let rightData = [];
+			let leftData = [];
+
+			for (p of rightDiv) {
+		    	rightData.push(p.innerHTML);
+			}
+
+			for (p of leftDiv) {
+			    leftData.push(p.innerHTML);
+			}
+			
+			return [rightData, leftData];
+		}
+
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.save').click(function(){
+			var dataArray = collectData()
+			console.log(dataArray)
+			$.ajax({
+				type: "POST",
+				url: "{% url 'classrooms:picked' %}",
+				data: {'classroom': '{{ object.id }}', 'users': dataArray[1], 'picked': dataArray[0], 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+				dataType: "json",
+			}); 
+		})
+	</script>
+</body>
+
+</html>

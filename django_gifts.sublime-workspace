@@ -1,0 +1,330 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fi",
+				"first_noti_properties"
+			],
+			[
+				"bot",
+				"border-top\tproperty"
+			],
+			[
+				"bgc",
+				"background-color\tproperty"
+			],
+			[
+				"su",
+				"surface"
+			],
+			[
+				"pro",
+				"property_obj"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"re",
+				"regex"
+			],
+			[
+				"q",
+				"querySelector"
+			],
+			[
+				"pa",
+				"padding-bottom\tproperty"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"co",
+				"color\tproperty"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"use",
+				"user_notifications"
+			],
+			[
+				"c",
+				"context"
+			],
+			[
+				"user",
+				"user_notifications"
+			],
+			[
+				"db",
+				"db_table"
+			],
+			[
+				"M",
+				"Model"
+			],
+			[
+				"Use",
+				"User"
+			],
+			[
+				"fo",
+				"forms"
+			],
+			[
+				"us",
+				"user_views"
+			],
+			[
+				"ti",
+				"timezone"
+			],
+			[
+				"post",
+				"posts"
+			],
+			[
+				"or",
+				"order"
+			],
+			[
+				"order",
+				"orderOfMax"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"ios",
+				"iostream\tstandard header"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Build With: C++ Single File - Run"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 151.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/fd/Developer/Django/django_gifts/src"
+	],
+	"file_history":
+	[
+		"/var/folders/x9/dz06sljx2vdd3zr8pzhnl3z80000gn/T/kite_tutorial.py",
+		"/Users/fd/Developer/Django/django_realestate/src/properties/models.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/templatetags/generate_tabs.py",
+		"/Users/fd/Developer/Django/django_realestate/src/properties/templates/properties/property_list.html",
+		"/Users/fd/Developer/Django/django_realestate/src/properties/views.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/templatetags/__init__.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/templates/users/snippets/notification_form.html",
+		"/Users/fd/Developer/Django/django_realestate/src/django_realestate/settings.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/models.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/admin.py",
+		"/Users/fd/Developer/Django/django_realestate/src/pages/views.py",
+		"/Users/fd/Developer/Django/django_realestate/src/users/functions.py",
+		"/Users/fd/Developer/Django/django_realestate/src/.gitignore",
+		"/Users/fd/Developer/Django/django_realestate/src/pages/models.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_realestate/src/django_realestate/settings.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/users/forms.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/users/templates/users/login.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/templates/blog/base.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/users/templates/users/logout.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/django_blog/urls.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/users/templates/users/register.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/django_blog/settings.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/models.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/views.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/urls.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/admin.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/templates/blog/home.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django_blog/src/blog/templates/blog/about.html",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django/src/manage.py",
+		"/Users/filipdabkowski/Desktop/Django_Projects/django/django.sublime-project",
+		"/Users/filipdabkowski/Documents/Temporarly/test.cpp",
+		"/Users/filipdabkowski/Desktop/Python/test.py",
+		"/Users/filipdabkowski/Documents/school/zad4.cpp",
+		"/Users/filipdabkowski/Documents/school/lesson1.cpp"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "django_gifts.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
