@@ -1,0 +1,136 @@
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    text-align: initial;
+    height: 100vh;
+}
+
+main::before {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+}
+
+main > header {
+    position: fixed;
+    width: 80vw;
+}
+
+section:first-of-type {
+    margin-top: 50px;
+}
+
+section {
+    width: 80vw;
+    padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    display: block;
+}
+
+section header {
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section header span {
+    font-weight: 700;
+}
+
+section header button {
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+section header button:hover {
+    background-color: #eee;
+}
+
+section header a {
+    display: block;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font: 400 13.3333px Arial;
+}
+
+section header a:hover {
+    background-color: #eee;
+}
+
+section > div {
+    min-height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+section > div > button {
+    position: absolute;
+    right: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+section > div > button:hover {
+    background-color: #ddd;
+}
+
+section > div > div:first-of-type {
+    position: absolute;
+    left: 15px;
+    right: 95px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section > div h1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #f14344;
+}
+
+section > div p {
+    font-size: 17px;
+}
+
+section > div a {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 15px;
+}

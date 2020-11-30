@@ -1,0 +1,213 @@
+header {
+    background-color: #fed;
+    height: 9vh;
+    width: 100vw;
+}
+
+
+header::before {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+}
+
+header::after {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+}
+
+.upperLogo {
+    background-image: repeating-radial-gradient(17vw 17vw at 50% 50%, #fba 0% 0%, #fed 1% 8%, #fba 9% 17%);
+    height: 7vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.upperLogo span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    letter-spacing: 1vw;
+    color: #b33;
+    font-size: 3vh;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    height: 91vh;
+    width: 100vw;
+}
+
+.auth_box {
+    width: 85vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.auth_box > div {
+    height: 100%;
+    float: right;
+}
+
+.auth_box > div:nth-child(1) {
+    position: relative;
+    background-image: url(images/przemek_auth.jpg);
+    background-size: cover;
+    background-position: top;
+    padding: 30px 75px 0px 25px;
+    color: #000;
+    text-align: right;
+    width: 60%;
+}
+.signup .auth_box > div:nth-child(1) {
+    background-image: url(images/filip_auth.jpg);
+}
+.auth_box > div:nth-child(1) .logo {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+
+.auth_box .logo a {
+    color: #060;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth_box > div:nth-child(1) .auth_info {
+    width: 70%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.auth_box > div:nth-child(1) h1 {
+    font-family: serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #333;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #888;
+}
+
+.auth_box > div:nth-child(1) p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #888;
+    margin-top: -15px;
+    letter-spacing: 2px;
+}
+
+.auth_box > div:nth-child(1) a {
+    -webkit-text-stroke-width: inherit;
+    -webkit-text-stroke-color: #99f;
+    color: #119
+}
+
+.auth_box > div:nth-child(2) {
+    position: relative;
+    background-color: #fed;
+    padding: 20px 70px;
+    width: 40%;
+}
+
+.auth_box > div:nth-child(2) p {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    font-weight: 300;
+}
+
+.auth_box > div:nth-child(2) p a {
+    color: #000;
+    display: inline-block;
+    padding-left: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+form {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth_box .form_item {
+    position: relative;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.auth_box .form_item input {
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding: 9px 5px;
+    background-color: #fed;
+    border: none;
+    border-bottom: 2px solid #dbb;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+    outline: none;
+}
+
+.auth_box .form_item input:focus {
+    outline: none;
+    color: #000;
+    border-bottom: 2px solid #8b5c3b;
+}
+
+.auth_box .form_item input:focus::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.auth_box .form_item input::-webkit-input-placeholder {
+    color: #dbb;
+}
+
+.auth_box .form_item label {
+    font-size: 11px;
+    margin-left: 5px;
+    margin-top: -48px;
+    font-weight: 600;
+    display: block;
+    transition: all .3s;
+    text-transform: uppercase;
+    color: #8f8f8f;
+}
+
+.auth_box .form_item input:placeholder-shown ~ label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+}
+
+.auth_box .errors {
+    text-align: left;
+    font-size: 15px;
+}
