@@ -94,13 +94,6 @@ def logout_page(request):
 
 def landing_page(request):
 	
-	email = request.user.email
+	context = {}
 	
-	user = Student.objects.filter(email__exact=email).first()
-	if user is None:
-		user = Teacher.objects.filter(email__exact=email).first()
-	
-	context = {
-		"user": user
-	}
 	return render(request, 'pages/landing.html', context)
