@@ -92,7 +92,7 @@ def profile_delete_view(request, slug):
 	
 	if request.method == "POST":
 		email = request.user.email
-		user = User.objects.get(email=em)
+		user = User.objects.get(email=email)
 		
 		user.delete()
 		return redirect('/')

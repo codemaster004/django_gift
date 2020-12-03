@@ -84,10 +84,9 @@ def classes_list_view(request):
 	user = Student.objects.filter(email__exact=email).first()
 	if user is None:
 		user = Teacher.objects.filter(email__exact=email).first()
+	
 	waiting = user.waiting.all()
 	my_classes = user.classroom.all()
-	
-	print(classes, waiting)
 	
 	base_data = get_my_classes(request)
 	
