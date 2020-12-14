@@ -4,8 +4,288 @@
 		"selected_items":
 		[
 			[
+				"u",
+				"user\tAbstractUser | User ⟠"
+			],
+			[
+				"set",
+				"set_password(…)\tfunction ⟠"
+			],
+			[
+				"HOST",
+				"HOST': '\t1★ pro ⟠"
+			],
+			[
+				"ch",
+				"check"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"use",
+				"users\tlist ⟠"
+			],
+			[
+				"s",
+				"students"
+			],
+			[
+				"sig",
+				"signup\t⟠"
+			],
+			[
+				"white",
+				"whitenoise.middleware\t3★ pro ⟠"
+			],
+			[
+				"STATIC",
+				"STATIC_ROOT\t⟠"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"id",
+				"id=\"main\"\t⟠"
+			],
+			[
+				"tran",
+				"transform\tproperty"
+			],
+			[
+				"Use",
+				"Username\t⟠"
+			],
+			[
+				"console",
+				"console.log(images\t⟠"
+			],
+			[
+				"l",
+				"length;\t⟠"
+			],
+			[
+				"im",
+				"images\t⟠"
+			],
+			[
+				"end",
+				"endif\t⟠"
+			],
+			[
+				"tra",
+				"translateY()\ttransform"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"pa",
+				"padding-left\tproperty"
+			],
+			[
+				"user",
+				"users\t⟠"
+			],
+			[
+				"userna",
+				"username\t⟠"
+			],
+			[
+				"stu",
+				"students\t⟠"
+			],
+			[
+				"ap",
+				"append"
+			],
+			[
+				"ra",
+				"range\ttype ⟠"
+			],
+			[
+				"cl",
+				"classroom\ttype ⟠"
+			],
+			[
+				"random",
+				"RandomPerson\ttype ⟠"
+			],
+			[
+				"cla",
+				"classroom_id\t⟠"
+			],
+			[
+				"consol",
+				"console.log\t⟠"
+			],
+			[
+				"te",
+				"text-decoration\tproperty"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"tet",
+				"text-decoration\tproperty"
+			],
+			[
+				"ne",
+				"new_users\t⟠"
+			],
+			[
+				"T",
+				"True\tbool ⟠"
+			],
+			[
+				"st",
+				"students\t⟠"
+			],
+			[
+				"re",
+				"related_name=…\tkeyword ⟠"
+			],
+			[
+				"Ma",
+				"ManyToManyField\ttype ⟠"
+			],
+			[
+				"tex",
+				"text-decoration\tproperty"
+			],
+			[
+				"bor",
+				"border-radius\tproperty"
+			],
+			[
+				"fos",
+				"font-size\tproperty"
+			],
+			[
+				"base",
+				"base_data\t⟠"
+			],
+			[
+				"home",
+				"home_view"
+			],
+			[
+				"stude",
+				"Student\t⟠"
+			],
+			[
+				"m",
+				"Manager\ttype ⟠"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"clas",
+				"classrooms\t⟠"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"sta",
+				"static\t⟠"
+			],
+			[
+				"lo",
+				"load\t⟠"
+			],
+			[
+				"sut",
+				"sudents\t⟠"
+			],
+			[
+				"obj",
+				"obj.name\t3★ pro ⟠"
+			],
+			[
+				"e",
+				"exists"
+			],
+			[
+				"name",
+				"name=name\t4★ pro ⟠"
+			],
+			[
+				"on",
+				"on_delete=models.CASCADE\t5★ pro ⟠"
+			],
+			[
+				"f",
+				"first"
+			],
+			[
+				"ob",
+				"objects"
+			],
+			[
+				"get",
+				"get_absolute_url\t⟠"
+			],
+			[
 				"fi",
-				"first_noti_properties"
+				"first()\tfunction ⟠"
+			],
+			[
+				"n",
+				"new_bio\t⟠"
+			],
+			[
+				"new",
+				"new_id\tint ⟠"
+			],
+			[
+				"va",
+				"value=\"\"\t⟠"
+			],
+			[
+				"usern",
+				"username\t⟠"
+			],
+			[
+				"r",
+				"return\tkeyword ⟠"
+			],
+			[
+				"ma",
+				"max_length=…\tkeyword ⟠"
+			],
+			[
+				"tea",
+				"teacher\t⟠"
+			],
+			[
+				"Documet",
+				"Documents\t⟠"
+			],
+			[
+				"Tr",
+				"True, blank=True\t3★ pro ⟠"
+			],
+			[
+				"si",
+				"signin"
+			],
+			[
+				"Pas",
+				"Password\t⟠"
+			],
+			[
+				"h",
+				"h1\tTag"
 			],
 			[
 				"bot",
@@ -28,16 +308,8 @@
 				"text"
 			],
 			[
-				"re",
-				"regex"
-			],
-			[
 				"q",
 				"querySelector"
-			],
-			[
-				"pa",
-				"padding-bottom\tproperty"
 			],
 			[
 				"sty",
@@ -52,16 +324,8 @@
 				"CharField"
 			],
 			[
-				"use",
-				"user_notifications"
-			],
-			[
 				"c",
 				"context"
-			],
-			[
-				"user",
-				"user_notifications"
 			],
 			[
 				"db",
@@ -72,16 +336,8 @@
 				"Model"
 			],
 			[
-				"Use",
-				"User"
-			],
-			[
 				"fo",
 				"forms"
-			],
-			[
-				"us",
-				"user_views"
 			],
 			[
 				"ti",
@@ -100,10 +356,6 @@
 				"orderOfMax"
 			],
 			[
-				"ma",
-				"main\tmain()"
-			],
-			[
 				"ios",
 				"iostream\tstandard header"
 			]
@@ -111,6 +363,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "pages/views.py",
+			"settings":
+			{
+				"buffer_size": 2376,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -164,10 +425,64 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/fd/Developer/Django/django_gifts/src"
+		"/Users/fd/Developer/Django/django_gifts/src",
+		"/Users/fd/Developer/Django/django_gifts/src/pages"
 	],
 	"file_history":
 	[
+		"/Users/fd/Developer/Django/django_gifts/src/django_gifts/settings.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_generate.html",
+		"/Users/fd/Developer/Django/django_gifts/src/users/views.py",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/views.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/views.py",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/templates/pages/landing.html",
+		"/Users/fd/Developer/Django/django_gifts/src/requirements.txt",
+		"/Users/fd/Developer/Django/django_gifts/src/users/templates/users/profile_update.html",
+		"/Users/fd/Developer/Django/django_gifts/src/users/templates/users/profile_delete.html",
+		"/Users/fd/Developer/Django/django_gifts/src/users/templates/users/home.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_create.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_update.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_delete.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_detail.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/classroom_list.html",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/templates/pages/signin.html",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/templates/pages/signup.html",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/base.css",
+		"/Users/fd/Developer/Django/django_gifts/src/users/models.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/models.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/classroom_generate.css",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/static/pages/auth.css",
+		"/Users/fd/Developer/Django/django_gifts/src/Procfile",
+		"/Users/fd/Developer/Django/django_gifts/src/runtime.txt",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/static/pages/landing.css",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/classroom_create.css",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/classroom_detail.css",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/admin.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/urls.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/classroom_update.css",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/static/classrooms/classroom_delete.css",
+		"/Users/fd/Developer/Django/django_gifts/src/users/static/users/user_detail.css",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/templates/classrooms/home.html",
+		"/Users/fd/Developer/Django/django_gifts/src/users/urls.py",
+		"/Users/fd/Developer/Django/django_gifts/src/django_gifts/urls.py",
+		"/Users/fd/Developer/Django/django_gifts/src/classrooms/forms.py",
+		"/Users/fd/Developer/Django/django_gifts/src/users/admin.py",
+		"/Users/fd/Developer/Django/django_gifts/src/pages/forms.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/apps.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/admin.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/templates/class/home.html",
+		"/Users/fd/Developer/Django/django_gifts/src/class/models.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/views.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/urls.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/templates/class/base.html",
+		"/Users/fd/Developer/Django/django_gifts/src/users/signals.py",
+		"/Users/fd/Developer/Django/django_gifts/src/users/forms.py",
+		"/Users/fd/Developer/Django/django_gifts/src/users/apps.py",
+		"/Users/fd/Developer/Django/django_gifts/src/users/__init__.py",
+		"/Users/fd/Developer/Django/django_gifts/src/class/templates/class/class_form.html",
+		"/Users/fd/Developer/Django/django_gifts/src/class/templates/class/class_detail.html",
+		"/Users/fd/Developer/Django/django_gifts/src/class/templates/class/class_confirm_delete.html",
+		"/Users/fd/Developer/Django/django_gifts/src/class/tests.py",
 		"/var/folders/x9/dz06sljx2vdd3zr8pzhnl3z80000gn/T/kite_tutorial.py",
 		"/Users/fd/Developer/Django/django_realestate/src/properties/models.py",
 		"/Users/fd/Developer/Django/django_realestate/src/users/templatetags/generate_tabs.py",
@@ -209,7 +524,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 102.0,
 		"where_history":
 		[
 		]
@@ -236,8 +551,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "pages/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1732,
+								1732
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -322,7 +667,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 217.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

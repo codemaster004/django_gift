@@ -126,7 +126,7 @@ def class_detail_view(request, id):
 	
 	context = {
 		'object': obj,
-		'students': students,
+		'students': sorted(students, key=lambda x: x.username),
 		'teacher': teacher,
 		'context': base_data,
 		'picked_person': picked_person,
@@ -200,7 +200,7 @@ def class_generate_view(request, id):
 	users = [student for student in students]
 	users.append(teacher)
 	new_users = users[:]
-	
+			
 	if len(users) != 1:
 		not_shuffled = True
 		while not_shuffled:
@@ -211,8 +211,7 @@ def class_generate_view(request, id):
 				if new_users[user_index] == users[user_index]:
 					value = True
 			not_shuffled = value
-				
-	
+			
 	base_data = get_my_classes(request)
 	
 	context = {
