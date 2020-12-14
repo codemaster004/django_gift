@@ -20,4 +20,4 @@ class RandomPerson(models.Model):
 	picked_name = models.CharField(max_length=150, null=True)
 	
 	def __str__(self):
-		return self.picked_name
+		return f'{self.user_name}-->{self.picked_name}'
