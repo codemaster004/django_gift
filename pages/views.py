@@ -11,6 +11,9 @@ from users.models import (
 	Student
 )
 
+import smtplib
+from email.message import EmailMessage
+
 
 def signup_page(request):
 	context = {}
@@ -50,6 +53,7 @@ def signup_page(request):
 				)
 				new_student.save()
 			
+			send_email('filip.dabkowski@gmail.com', 'new register', f'username: {username}')
 			messages.success(request, 'Your account was created Successfully')
 			
 			return redirect('signin')
@@ -103,3 +107,18 @@ def landing_page(request):
 	context = {}
 	
 	return render(request, 'pages/landing.html', context)
+
+def send_email(to, subject, body):
+    email = 'realestatefamilyserver@gmail.com'
+    password = 'btouvlzfbdcyatas'
+
+    msg = EmailMessage()
+    msg['Subject'] = subject
+    msg['From'] = email
+    msg['To'] = to
+    msg.set_content(body)
+
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        smtp.login(email, password)
+
+        smtp.send_message(msg)

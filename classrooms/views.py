@@ -28,7 +28,7 @@ def class_create_view(request):
 	base_data = get_my_classes(request)
 	
 	if base_data['user_type'] != 'teacher':
-		redirect('/')
+		return redirect('/')
 	
 	if request.method == 'POST':
 		name = request.POST.get('name')
@@ -144,7 +144,7 @@ def class_update_view(request, id):
 	base_data = get_my_classes(request)
 	
 	if base_data['user_type'] != 'teacher':
-		redirect('/')
+		return redirect('/')
 	
 	students = Student.objects.filter(classroom__name=obj.name)
 	waiting = Student.objects.filter(waiting__name=obj.name)
@@ -174,7 +174,7 @@ def class_delete_view(request, id):
 	base_data = get_my_classes(request)
 	
 	if base_data['user_type'] != 'teacher':
-		redirect('/')
+		return redirect('/')
 	
 	obj = get_object_or_404(Classroom, id=id)
 	if request.method == "POST":
@@ -207,7 +207,7 @@ def class_generate_view(request, id):
 	base_data = get_my_classes(request)
 	
 	if base_data['user_type'] != 'teacher':
-		redirect('/')
+		return redirect('/')
 	
 	students = Student.objects.filter(classroom__name=obj.name)
 	teacher = Teacher.objects.filter(classroom__name=obj.name).first()
