@@ -119,6 +119,10 @@ def class_detail_view(request, id):
 	user = Student.objects.filter(email__exact=email).first()
 	if user is None:
 		user = Teacher.objects.filter(email__exact=email).first()
+	
+	print(students, user)
+	if not(user in students):
+		return redirect('/')
 		
 	picked_person = user.picked.filter(class_name=obj.name).first()
 	
