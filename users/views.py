@@ -53,18 +53,24 @@ def profile_update_view(request, slug):
 	bio = ''
 	
 	if request.method == 'POST':
-		new_name = request.POST.get('username')
-		new_bio = request.POST.get('bio')
+		if username == request.user.username:
+			new_name = request.POST.get('username')
+			new_bio = request.POST.get('bio')
 		
-		user.bio = new_bio
-		user.username = new_name
+			user.bio = new_bio
+			user.username = new_name
 		
-		user.save()
+			user.save()
 		
-		return redirect(f'/user/{slug}/')
+			return redirect(f'/user/{slug}/')
+		else:
+			return redirect('/')
 	elif request.method == 'GET':
 		username = user.username
 		bio = user.bio
+		
+		if username != request.user.username:
+			return redirect(f'/')
 	
 	base_data = get_my_classes(request)
 	
@@ -91,10 +97,11 @@ def profile_delete_view(request, slug):
 		user = Teacher.objects.get(id=user_id)
 	
 	if request.method == "POST":
-		email = request.user.email
-		user = User.objects.get(email=email)
-		
-		user.delete()
+		if username == request.user.username:
+			email = request.user.email
+			user = User.objects.get(email=email)
+			
+			user.delete()
 		return redirect('/')
 	
 	base_data = get_my_classes(request)
