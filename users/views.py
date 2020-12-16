@@ -53,7 +53,7 @@ def profile_update_view(request, slug):
 	bio = ''
 	
 	if request.method == 'POST':
-		if username == request.user.username:
+		if user.username == request.user.username:
 			new_name = request.POST.get('username')
 			new_bio = request.POST.get('bio')
 		
@@ -97,7 +97,7 @@ def profile_delete_view(request, slug):
 		user = Teacher.objects.get(id=user_id)
 	
 	if request.method == "POST":
-		if username == request.user.username:
+		if user.username == request.user.username:
 			email = request.user.email
 			user = User.objects.get(email=email)
 			
