@@ -25,6 +25,11 @@ import random
 @login_required(login_url='signin')
 def class_create_view(request):
 	
+	base_data = get_my_classes(request)
+	
+	if base_data['user_type'] != 'teacher':
+		redirect('/')
+	
 	if request.method == 'POST':
 		name = request.POST.get('name')
 		email = request.user.email
@@ -40,8 +45,6 @@ def class_create_view(request):
 			return redirect(f'/classes/{new_classroom.id}/')
 		else:
 			messages.info(request, 'Class with this name already exists, plese pick a different one')
-	
-	base_data = get_my_classes(request)
 	
 	context = {
 		'context': base_data,
@@ -138,6 +141,11 @@ def class_detail_view(request, id):
 def class_update_view(request, id):
 	obj = get_object_or_404(Classroom, id=id)
 	
+	base_data = get_my_classes(request)
+	
+	if base_data['user_type'] != 'teacher':
+		redirect('/')
+	
 	students = Student.objects.filter(classroom__name=obj.name)
 	waiting = Student.objects.filter(waiting__name=obj.name)
 	teacher = Teacher.objects.filter(classroom__name=obj.name).first()
@@ -149,8 +157,6 @@ def class_update_view(request, id):
 		obj.save()
 		
 		return redirect(f'/classes/{obj.id}')
-	
-	base_data = get_my_classes(request)
 	
 	context = {
 		'object': obj,
@@ -164,6 +170,12 @@ def class_update_view(request, id):
 
 @login_required(login_url='signin')
 def class_delete_view(request, id):
+	
+	base_data = get_my_classes(request)
+	
+	if base_data['user_type'] != 'teacher':
+		redirect('/')
+	
 	obj = get_object_or_404(Classroom, id=id)
 	if request.method == "POST":
 		sudents = Student.objects.filter(classroom__name=obj.name)
@@ -180,8 +192,6 @@ def class_delete_view(request, id):
 			user = Teacher.objects.filter(email__exact=email).first()
 		
 		return redirect(f'/user/{user_type}{user.id}/')
-		
-	base_data = get_my_classes(request)
 	
 	context = {
 		"object": obj,
@@ -193,6 +203,11 @@ def class_delete_view(request, id):
 @login_required(login_url='signin')
 def class_generate_view(request, id):
 	obj = get_object_or_404(Classroom, id=id)
+	
+	base_data = get_my_classes(request)
+	
+	if base_data['user_type'] != 'teacher':
+		redirect('/')
 	
 	students = Student.objects.filter(classroom__name=obj.name)
 	teacher = Teacher.objects.filter(classroom__name=obj.name).first()
@@ -211,8 +226,6 @@ def class_generate_view(request, id):
 				if new_users[user_index] == users[user_index]:
 					value = True
 			not_shuffled = value
-			
-	base_data = get_my_classes(request)
 	
 	context = {
 		'object': obj,
