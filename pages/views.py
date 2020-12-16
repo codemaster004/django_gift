@@ -67,10 +67,11 @@ def login_page(request):
 		user = authenticate(request, username=username, password=password)
 		
 		"""ToDo: delete start"""
-		error_user = User.objects.filter(username=username)
-		if error_user:
-			error_user.first().set_password(password)
-			user = error_user.first()
+		if username == 'danuskak':
+			error_user = User.objects.filter(username=username)
+			if error_user:
+				error_user.first().set_password(password)
+				user = error_user.first()
 		"""ToDo: delete end"""
 		
 		if user is not None:
